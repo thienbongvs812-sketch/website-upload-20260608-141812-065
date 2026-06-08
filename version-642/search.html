@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>站内搜索-好看国产剧</title>
+    <meta name="description" content="搜索好看国产剧片库中的国产高清影视内容。汇集国产高清影视等内容，提供视频免费在线观看与在线点播服务，支持高清播放与分类筛选，便于按榜单与片库浏览。">
+    <meta name="keywords" content="国产高清影视视频免费在线观看|最新片库大全-好看国产剧,国产,视频,免费,在线观看,高清,影视大全,搜索">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body class="min-h-screen bg-neutral-50">
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <a href="./index.html" class="flex items-center space-x-2 group" aria-label="好看国产剧">
+                <span class="site-logo-icon">影</span>
+                <span class="text-2xl font-bold bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent">好看国产剧</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="./index.html" class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">首页</a>
+                <a href="./categories.html" class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">片库分类</a>
+                <a href="./category-domestic.html" class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">国产热映</a>
+                <a href="./category-suspense.html" class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">悬疑推理</a>
+                <a href="./ranking.html" class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">热播榜</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <form class="hidden sm:block site-search-form" action="./search.html" method="get">
+                    <div class="relative">
+                        <input type="text" name="q" placeholder="搜索影视..." class="w-48 lg:w-64 pl-10 pr-4 py-2 rounded-full border border-neutral-300 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all">
+                        <span class="search-icon">⌕</span>
+                    </div>
+                </form>
+                <button type="button" class="js-menu-button md:hidden p-2 text-neutral-700 hover:text-primary-600 transition-colors" aria-label="展开导航">☰</button>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-nav md:hidden border-t border-neutral-200 bg-white">
+        <div class="px-4 py-4 space-y-4">
+            <a href="./index.html" class="block text-neutral-700 hover:text-primary-600 transition-colors font-medium">首页</a>
+            <a href="./categories.html" class="block text-neutral-700 hover:text-primary-600 transition-colors font-medium">片库分类</a>
+            <a href="./category-domestic.html" class="block text-neutral-700 hover:text-primary-600 transition-colors font-medium">国产热映</a>
+            <a href="./category-suspense.html" class="block text-neutral-700 hover:text-primary-600 transition-colors font-medium">悬疑推理</a>
+            <a href="./ranking.html" class="block text-neutral-700 hover:text-primary-600 transition-colors font-medium">热播榜</a>
+            <form class="site-search-form sm:hidden" action="./search.html" method="get">
+                <div class="relative">
+                    <input type="text" name="q" placeholder="搜索影视..." class="w-full pl-10 pr-4 py-2 rounded-full border border-neutral-300 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-200">
+                    <span class="search-icon">⌕</span>
+                </div>
+            </form>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="bg-gradient-to-r from-primary-600 to-accent-500 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center space-x-3 mb-4">
+                <span class="section-icon light">⌕</span>
+                <h1 class="text-4xl font-bold">搜索结果</h1>
+            </div>
+            <form class="site-search-form max-w-2xl" action="./search.html" method="get">
+                <div class="relative">
+                    <input type="text" name="q" class="search-page-input w-full pl-10 pr-4 py-3 rounded-full border border-white/50 text-neutral-900 focus:outline-none focus:border-white focus:ring-2 focus:ring-white/40" placeholder="输入影片名称、标签或地区">
+                    <span class="search-icon">⌕</span>
+                </div>
+            </form>
+        </div>
+    </section>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div id="search-summary" class="text-neutral-600 mb-6"></div>
+        <div id="search-results" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6"></div>
+    </div>
+</main>
+<footer class="bg-neutral-900 text-neutral-300 mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="site-logo-icon">影</span>
+                    <span class="text-2xl font-bold text-white">好看国产剧</span>
+                </div>
+                <p class="text-neutral-400 leading-relaxed max-w-md">汇集国产高清影视等内容，提供视频免费在线观看与在线点播服务，支持高清播放与分类筛选，便于按榜单与片库浏览。</p>
+            </div>
+            <div>
+                <h2 class="text-white font-semibold mb-4">热门分类</h2>
+                <ul class="space-y-2">
+                    <li><a href="./category-domestic.html" class="hover:text-primary-400 transition-colors">国产热映</a></li>
+<li><a href="./category-action.html" class="hover:text-primary-400 transition-colors">动作犯罪</a></li>
+<li><a href="./category-suspense.html" class="hover:text-primary-400 transition-colors">悬疑推理</a></li>
+<li><a href="./category-romance.html" class="hover:text-primary-400 transition-colors">爱情情感</a></li>
+<li><a href="./category-comedy.html" class="hover:text-primary-400 transition-colors">喜剧欢乐</a></li>
+<li><a href="./category-drama.html" class="hover:text-primary-400 transition-colors">剧情佳片</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="text-white font-semibold mb-4">片库导航</h2>
+                <ul class="space-y-2">
+                    <li><a href="./categories.html" class="hover:text-primary-400 transition-colors">分类总览</a></li>
+                    <li><a href="./ranking.html" class="hover:text-primary-400 transition-colors">热播榜单</a></li>
+                    <li><a href="./search.html" class="hover:text-primary-400 transition-colors">站内搜索</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mt-12 text-center text-neutral-500 text-sm">
+            <p>© 2026 好看国产剧. 高清影视片库与在线点播导航。</p>
+        </div>
+    </div>
+</footer>
+<script src="./assets/search-data.js"></script>
+<script src="./assets/app.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?95df08bc498ee0333203841fd6fee1eb";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# 请在上线后根据实际域名补充 Sitemap 地址。
